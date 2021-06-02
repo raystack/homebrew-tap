@@ -12,26 +12,26 @@ class Optimus < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/optimus/releases/download/v0.0.1-rc.1/optimus_0.0.1-rc.1_macos_x86_64.tar.gz"
-      sha256 "6f539fa7120164195ab9fd64175e6c52066537666ca47c15c1d878698b5166f2"
+      sha256 "552bd2f543ab51dff701b2d23cb9ebdbf99ea585c08d7d7facfba4d97563e7c5"
     end
     if Hardware::CPU.arm?
       url "https://github.com/odpf/optimus/releases/download/v0.0.1-rc.1/optimus_0.0.1-rc.1_macos_arm64.tar.gz"
-      sha256 "c55ee60647f2b5997a11ef887723202db6cde69ab8f1a713b16120b41effe3bd"
+      sha256 "f0a64c6df581cfd6ffa1f7281be7396239d9f4f5f04eacc7bf9c7559d50cc8a0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/optimus/releases/download/v0.0.1-rc.1/optimus_0.0.1-rc.1_linux_x86_64.tar.gz"
-      sha256 "e0096a0655aa939c4a58bed7b6f2599583405c0e263c3d7d763e03fa56604aa3"
+      sha256 "6fb52f4cec673831ed10a26d6e1cb0fb7e07bbe364b2804886e102f81e0d60be"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/optimus/releases/download/v0.0.1-rc.1/optimus_0.0.1-rc.1_linux_armv6.tar.gz"
-      sha256 "6959a73d572257a89f04992a254c98d1fe3b8ae79cc2a082d2f1f44a74f46e92"
+      sha256 "c34934edde0ee1f6add9db2fb84290d2fd870493c6fb164d3e79ff73ed959f67"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/optimus/releases/download/v0.0.1-rc.1/optimus_0.0.1-rc.1_linux_arm64.tar.gz"
-      sha256 "bc6219a71448aa63b70ff944af11112b59ac5f91ffa402a773b652ea1138c025"
+      sha256 "d85ed2f259977167cc223cc171f3d88f337f1904be5d0f4b51167bc26ebe1b48"
     end
   end
 
