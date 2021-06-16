@@ -12,22 +12,22 @@ class OptimusPluginsOdpf < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/transformers/releases/download/v0.0.1/transformers_0.0.1_macos_x86_64.tar.gz"
-      sha256 "c061423df4fc5714166763880852a349bd18b1c65943195185d9188c04b3bbbb"
+      sha256 "2be598203b13d9bb516f8928c907fa26885f12eebf85d22d6b830a5303111007"
     end
     if Hardware::CPU.arm?
       url "https://github.com/odpf/transformers/releases/download/v0.0.1/transformers_0.0.1_macos_arm64.tar.gz"
-      sha256 "2ed8e7e6d41ce57cb7c890b02b682e6b958e877f9d4944e7d02a46c0af0a4fbe"
+      sha256 "ec304a8512316f06c31417d8afaee5826ca5ef0f6d11370b323d6c7387397c98"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/transformers/releases/download/v0.0.1/transformers_0.0.1_linux_x86_64.tar.gz"
-      sha256 "848f2120cb67b63d718280a5d3616e17a31f9a9e37f95991a39edde952651ca4"
+      sha256 "62d7fb7f8ee6e489f5d72814706686365d977c63f4e35d5fdad09c830628c9c8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/transformers/releases/download/v0.0.1/transformers_0.0.1_linux_arm64.tar.gz"
-      sha256 "f22f80f9b046aa87fd3685efe3696fbaafd65e3b6b7074eb103e1b0cb9164aa9"
+      sha256 "dc39ed53b4a94840d6f516a6c4964b45ae597e7a8bdc485f7124ba4c92e2cd5a"
     end
   end
 
