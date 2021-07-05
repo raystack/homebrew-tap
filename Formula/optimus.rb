@@ -5,33 +5,33 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://odpf.github.io/optimus"
-  version "0.0.2-alpha.2"
+  version "0.0.2-alpha.3"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.2/optimus_0.0.2-alpha.2_macos_x86_64.tar.gz"
-      sha256 "9980bacad0debc8b1494c1f949385fe98c376850032d25c4e8df9058bee8c48f"
+      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.3/optimus_0.0.2-alpha.3_macos_x86_64.tar.gz"
+      sha256 "c5a8876aec2d5e21af47f23db79563479f7ddeb05b47a0f6d2627dac8fade42d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.2/optimus_0.0.2-alpha.2_macos_arm64.tar.gz"
-      sha256 "7da0608060be1be8716422f7f13458bcf402eb1be0c71c04f944a91cdbfbd5c4"
+      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.3/optimus_0.0.2-alpha.3_macos_arm64.tar.gz"
+      sha256 "30e6479b925602c8a6e0b75e89103e66f770615813e8df44e36bce2bb9eabe87"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.2/optimus_0.0.2-alpha.2_linux_x86_64.tar.gz"
-      sha256 "f3de4de89b8da94abd2b6e244b6811a007759e0abd83190b88b90b2f9002ddee"
+      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.3/optimus_0.0.2-alpha.3_linux_x86_64.tar.gz"
+      sha256 "b6541bb58dc8b0eac7d21701dfdd30cd8aa8735cea5078711cfc775966379150"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.2/optimus_0.0.2-alpha.2_linux_armv6.tar.gz"
-      sha256 "3abe661fc7844a8d007bcc9b98ed5c93d947553f86e8a8744b8b5b6e489bb61a"
+      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.3/optimus_0.0.2-alpha.3_linux_armv6.tar.gz"
+      sha256 "f00ab14cbfcb8f7f2490e0f776aea3ba962a78f80e40c4a3224df5e86b0df37d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.2/optimus_0.0.2-alpha.2_linux_arm64.tar.gz"
-      sha256 "28cf264942d5d05248344e87837010247a697c98b481a1ca3255607f49411a17"
+      url "https://github.com/odpf/optimus/releases/download/v0.0.2-alpha.3/optimus_0.0.2-alpha.3_linux_arm64.tar.gz"
+      sha256 "201815df1838defd2c3390814e6158a8dcdd1b6471adce7818fb05c5066fe8bc"
     end
   end
 
