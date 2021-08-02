@@ -5,29 +5,29 @@
 class OptimusPluginsOdpf < Formula
   desc "Optimus Plugins for warehouse"
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.0.4/transformers_0.0.4_macos_x86_64.tar.gz"
-      sha256 "d1b97ea5b240b342dcf2182261cf8a560598b9b490260e7f00954a3e46a57b18"
+      url "https://github.com/odpf/transformers/releases/download/v0.0.5/transformers_0.0.5_macos_x86_64.tar.gz"
+      sha256 "240f1a7af7dbb1fbb2f94fe49129093be985ca1f8868e8ca1a509a80ec23ae4a"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/transformers/releases/download/v0.0.4/transformers_0.0.4_macos_arm64.tar.gz"
-      sha256 "1e943bdadf9d98fd61f0c4f0d87b98c4a04c8dfa6c3bb289fdce488d5e6d49c3"
+      url "https://github.com/odpf/transformers/releases/download/v0.0.5/transformers_0.0.5_macos_arm64.tar.gz"
+      sha256 "2635ea68528ad8a37905c7743a8da86b641e675e555e9804f5d1faeb651e77e9"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.0.4/transformers_0.0.4_linux_x86_64.tar.gz"
-      sha256 "f6bfdb5feffb80fa309113d9aa135dae72ddd853f92414c2dea261a85387e0c7"
+      url "https://github.com/odpf/transformers/releases/download/v0.0.5/transformers_0.0.5_linux_x86_64.tar.gz"
+      sha256 "e49353e9cd15c25790cc079dbe40b2e664f20bf677343c1167703b64c0dc1288"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/transformers/releases/download/v0.0.4/transformers_0.0.4_linux_arm64.tar.gz"
-      sha256 "7a4754908c55ec4c02e4e5aaf86c77cb8724907800d5a426e92d85903d5da137"
+      url "https://github.com/odpf/transformers/releases/download/v0.0.5/transformers_0.0.5_linux_arm64.tar.gz"
+      sha256 "90ead72536a4cc57b955855874383baecbd318632520f266743b6ad59b6afb2d"
     end
   end
 
