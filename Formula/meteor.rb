@@ -5,33 +5,33 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/odpf/meteor"
-  version "0.1.7"
+  version "0.1.8"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.7/meteor_0.1.7_macos_x86_64.tar.gz"
-      sha256 "ffd8fe14562aed8ee124dbcf276a0914bdc24e541cc611831a0b15d105d9a933"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.8/meteor_0.1.8_macos_x86_64.tar.gz"
+      sha256 "4984f2765eb22b82397e5b6bb0178dba50b66624e3d9af6b1e39476826890901"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.7/meteor_0.1.7_macos_arm64.tar.gz"
-      sha256 "ad4b1efc94a93b1ee1a675f20b1629f7a596c2f1991104c4e8270cc750a850e6"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.8/meteor_0.1.8_macos_arm64.tar.gz"
+      sha256 "babd53521fa6e72a416fab98a887c7cf55ef4731b24ec18a95a6517fb61874d4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.7/meteor_0.1.7_linux_x86_64.tar.gz"
-      sha256 "35b9951af8f6858d6f3cef7a9bf3b7d81dbbc42a966b35439bc60adc0382adcd"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.8/meteor_0.1.8_linux_x86_64.tar.gz"
+      sha256 "008609c3a0a63fc9362cebeb6eea888db8c67408d05fc0d2ddc663dcbd454f08"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.7/meteor_0.1.7_linux_armv6.tar.gz"
-      sha256 "62c8fac0e0a084fa15d046f484d8f4fa412e755930d96f27fea12e29c7e9fb34"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.8/meteor_0.1.8_linux_armv6.tar.gz"
+      sha256 "ea98f5fd2e35d8341f7d7adf7a1f1ea297d0c9144d97a6d05061f3eee16de5e6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.7/meteor_0.1.7_linux_arm64.tar.gz"
-      sha256 "bead164829f5e6ac6921356f587a82d5dde9ae4da480e62609a736f9850ece51"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.8/meteor_0.1.8_linux_arm64.tar.gz"
+      sha256 "e2a94490ade33b6ccb6ea927aaf712b6e33697b093e3fba7cdbd1827cb53c5b5"
     end
   end
 
