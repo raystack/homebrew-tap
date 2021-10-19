@@ -5,33 +5,33 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/odpf/meteor"
-  version "0.1.10"
+  version "0.1.11"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.10/meteor_0.1.10_macos_arm64.tar.gz"
-      sha256 "d3d0b166c4a4fc6fca226dbbb82cd25805f0a838ca0931a037d5df2defc8cdfb"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.11/meteor_0.1.11_macos_arm64.tar.gz"
+      sha256 "72d79c68ffd3b54fab3eb78bb1af06f322b4ef72460854583fd0587b7f922df9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.10/meteor_0.1.10_macos_x86_64.tar.gz"
-      sha256 "a8a1cac6ba2acacdd9a8bffefe25c37a5b2a58502241187510077579d2fb5396"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.11/meteor_0.1.11_macos_x86_64.tar.gz"
+      sha256 "261808733c60bb4bdcb5fd3b9bcbd63f6c843826546794b07faec3a97c3060f5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.10/meteor_0.1.10_linux_arm64.tar.gz"
-      sha256 "90f8f4cdca30eb64a6f65fdb8c55086977f70aa7f6477af93fc3723ad08d36f7"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.11/meteor_0.1.11_linux_arm64.tar.gz"
+      sha256 "39ace89ca42a4fc932be25234d200b893eb02c01745adb65d38a5c63bb0797c6"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.10/meteor_0.1.10_linux_armv6.tar.gz"
-      sha256 "fff1a9993f8b7d7e97ad6f4489e3d72f76c8a5775f89159a29377a0b3292e1f9"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.11/meteor_0.1.11_linux_armv6.tar.gz"
+      sha256 "c162e7cfea06a38d505a63ec12a622ce1a5984b005c12319ef3bbc59923a67df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.10/meteor_0.1.10_linux_x86_64.tar.gz"
-      sha256 "35eeba0ae94dd7fdb5c67a87895792a7e9997b2394f9bfa0759a405e8b0f08a7"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.11/meteor_0.1.11_linux_x86_64.tar.gz"
+      sha256 "f4f28821412b97e7e9ce5e16229486123466d24c06e24ff7695ab7cc063caf8d"
     end
   end
 
