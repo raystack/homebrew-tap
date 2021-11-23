@@ -5,21 +5,21 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/odpf/meteor"
-  version "0.1.13"
+  version "0.1.14"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.13/meteor_0.1.13_macos_x86_64.tar.gz"
-      sha256 "2abf086b29a822a935b25c75e27da40cb0f20629c9950c60ce147e1e7a0870d7"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/meteor/releases/download/v0.1.14/meteor_0.1.14_macos_arm64.tar.gz"
+      sha256 "30d1cb42f02baf577ab41496ce2a4c4f8b2b0cb8718d02226bc139518fda28cb"
 
       def install
         bin.install "meteor"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.13/meteor_0.1.13_macos_arm64.tar.gz"
-      sha256 "904b9930ac73ab431776e153937ce0657922e3d5284e374821a94aef3ee36ad0"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/meteor/releases/download/v0.1.14/meteor_0.1.14_macos_x86_64.tar.gz"
+      sha256 "500ee92e6df8320160eb8777a7452eb833b60a13b7e80409dbf16c09e668936a"
 
       def install
         bin.install "meteor"
@@ -29,16 +29,16 @@ class Meteor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.13/meteor_0.1.13_linux_arm64.tar.gz"
-      sha256 "c609c482993529451bc6a61ab728e8247931cdd66473cd2fbbbf9086219b49e0"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.14/meteor_0.1.14_linux_arm64.tar.gz"
+      sha256 "9dcbd1a02e231c849e96a9d4f1b7d8d700851c61bdd6376077793cc299e638cc"
 
       def install
         bin.install "meteor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/meteor/releases/download/v0.1.13/meteor_0.1.13_linux_x86_64.tar.gz"
-      sha256 "0601b0faa1a4ca31e22a113f7f857c8fbd0f51c90cfe236fe6664228efe235f8"
+      url "https://github.com/odpf/meteor/releases/download/v0.1.14/meteor_0.1.14_linux_x86_64.tar.gz"
+      sha256 "31412c50a786afd4c239fbad88667d796d74f2a811246d1e6244d5e7597cca44"
 
       def install
         bin.install "meteor"
