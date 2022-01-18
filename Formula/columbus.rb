@@ -5,21 +5,21 @@
 class Columbus < Formula
   desc "Metadata Discovery and Lineage Service"
   homepage "https://github.com/odpf/columbus"
-  version "0.1.8"
+  version "0.1.9"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/columbus/releases/download/v0.1.8/columbus_0.1.8_macos_x86_64.tar.gz"
-      sha256 "4ab933275a33a1d05f2d20f6f48cc10635c8c85d04fea2ede4333ba05f64cdf9"
+      url "https://github.com/odpf/columbus/releases/download/v0.1.9/columbus_0.1.9_macos_x86_64.tar.gz"
+      sha256 "a2785fa72abc4d8c21aa37f51c2b6391f964d2f8e6043f15dda89c37ad80a351"
 
       def install
         bin.install "columbus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/columbus/releases/download/v0.1.8/columbus_0.1.8_macos_arm64.tar.gz"
-      sha256 "9d6b89a9b47019c313eed34c5e50f525dbce5777f45c3ca43a14df35072b05e1"
+      url "https://github.com/odpf/columbus/releases/download/v0.1.9/columbus_0.1.9_macos_arm64.tar.gz"
+      sha256 "00b92dc5ce530b1f8bf35ab9bb8c043b627d94e36f41fe133dcd4eff564602f9"
 
       def install
         bin.install "columbus"
@@ -28,25 +28,25 @@ class Columbus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/columbus/releases/download/v0.1.8/columbus_0.1.8_linux_x86_64.tar.gz"
-      sha256 "9162fd2e960882b4cc4769b0d92c4e0e76d13f5a645905680cdc4761ac052f4a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/columbus/releases/download/v0.1.9/columbus_0.1.9_linux_arm64.tar.gz"
+      sha256 "1fea3327ec58333d0357c9b541c62634eb02dc40330af21862bbc5645375e8c3"
 
       def install
         bin.install "columbus"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/columbus/releases/download/v0.1.8/columbus_0.1.8_linux_armv6.tar.gz"
-      sha256 "37ba3aafe60cdaa85a6fc216ac5b26f41da632437035177c7bd46224a7a35ad3"
+      url "https://github.com/odpf/columbus/releases/download/v0.1.9/columbus_0.1.9_linux_armv6.tar.gz"
+      sha256 "257260e4de2f82c968f96700b09b527ad073111c3b39d04d30ffeede7ea8bc2f"
 
       def install
         bin.install "columbus"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/columbus/releases/download/v0.1.8/columbus_0.1.8_linux_arm64.tar.gz"
-      sha256 "c7856ba17c8418bfc2c53cda9e35adfec2fa9a4da9d782611352c89364a37373"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/columbus/releases/download/v0.1.9/columbus_0.1.9_linux_x86_64.tar.gz"
+      sha256 "fd2b86acbc2603ce857801084fd93906c7717279375a09f228094d2a4de150e8"
 
       def install
         bin.install "columbus"
