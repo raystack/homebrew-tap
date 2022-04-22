@@ -5,21 +5,21 @@
 class Stencil < Formula
   desc "Schema registry"
   homepage "https://github.com/odpf/stencil"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/stencil/releases/download/v0.2.0/stencil_0.2.0_macos_x86_64.tar.gz"
-      sha256 "dd3473d19865232e0a5ffa76fbe53c96f21cb02f37111645b3250892bca295a6"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/stencil/releases/download/v0.2.1/stencil_0.2.1_macos_arm64.tar.gz"
+      sha256 "6aef9594ed4d503e93e421dab0f84f9fdcce4891bc415e15b43a3f2e3b71c46f"
 
       def install
         bin.install "stencil"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/stencil/releases/download/v0.2.0/stencil_0.2.0_macos_arm64.tar.gz"
-      sha256 "567657048c55e5115a3537b7b324a83961f6b7b644775e66397e12480f87525d"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/stencil/releases/download/v0.2.1/stencil_0.2.1_macos_x86_64.tar.gz"
+      sha256 "1232481f7cecd7de5481b434ec16cfa117b4fb69a986d9bc98c5a2686a23b784"
 
       def install
         bin.install "stencil"
@@ -28,25 +28,25 @@ class Stencil < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/stencil/releases/download/v0.2.0/stencil_0.2.0_linux_armv6.tar.gz"
-      sha256 "c14ece3fdfd58041c1d670e2f781a3fb949c306a20586b1d7945b657ac39c012"
-
-      def install
-        bin.install "stencil"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/stencil/releases/download/v0.2.0/stencil_0.2.0_linux_arm64.tar.gz"
-      sha256 "237f1fdd70e2e1adc9da570575ba0af433a32a80e9b64860320463896d1725af"
+      url "https://github.com/odpf/stencil/releases/download/v0.2.1/stencil_0.2.1_linux_arm64.tar.gz"
+      sha256 "98673068116f30b74f73f6df9eb5b3ee418a317577f5dceb7695ae4899a529de"
 
       def install
         bin.install "stencil"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/stencil/releases/download/v0.2.0/stencil_0.2.0_linux_x86_64.tar.gz"
-      sha256 "2f141d1f291d9a48828c3da1d4f9444873997c99cd7d61b8d2b51dc32ae8166e"
+      url "https://github.com/odpf/stencil/releases/download/v0.2.1/stencil_0.2.1_linux_x86_64.tar.gz"
+      sha256 "6fa97d98725f3601b1a380a9e936b68e609588bd334ffe38dff1474b393557e8"
+
+      def install
+        bin.install "stencil"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/stencil/releases/download/v0.2.1/stencil_0.2.1_linux_armv6.tar.gz"
+      sha256 "1ff331d33c7d93b1e797c35232df3399b2413df0d0906ad4113d0d38481a20a2"
 
       def install
         bin.install "stencil"
