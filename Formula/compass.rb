@@ -11,7 +11,7 @@ class Compass < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_macos_x86_64.tar.gz"
-      sha256 "7233e1db462036065cbba0ada92eccbe3854af6b254d0b2e0ff869ec8c32c311"
+      sha256 "647c076ef0bf8862fd12b5f9836da344b2553fb23f0c87f8829a0576802d43ba"
 
       def install
         bin.install "compass"
@@ -19,7 +19,7 @@ class Compass < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_macos_arm64.tar.gz"
-      sha256 "fb2da59a2b11ab0cba913f3a9bf33d8241ecfa9db6aa0646bb15860415782912"
+      sha256 "146f1da4c257b9500799d01dcd6837542b7e6d20c777295acfb9ab05a0cefedb"
 
       def install
         bin.install "compass"
@@ -28,17 +28,17 @@ class Compass < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_linux_arm64.tar.gz"
-      sha256 "8562d593d2a4f07901682d13429a11f26c3dacb031b4c692816c252d43ff9247"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_linux_x86_64.tar.gz"
+      sha256 "eb73959f63aa9f53c69ebd3598ca2fa19e4b17c9c23be796660bbcba4dc0c04f"
 
       def install
         bin.install "compass"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_linux_x86_64.tar.gz"
-      sha256 "4691c48e242c60d780ac8264edb6a9360f96bd3a13b523bb6f39f5f0135ed219"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_linux_arm64.tar.gz"
+      sha256 "c29c4f1430646495d94994582cd17a90d9d1fcec4f2c3918855815932678ee02"
 
       def install
         bin.install "compass"
@@ -46,7 +46,7 @@ class Compass < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/compass/releases/download/v0.2.2/compass_0.2.2_linux_armv6.tar.gz"
-      sha256 "b5b8d2eec057ab5aa50d3781d88516d2b5b98d80fcf43f640c8bc6db02c88c57"
+      sha256 "5f3b1f12f6c215679ac3e4c220e0f1a0ac233db24a42b3d9c3d0685d85fee943"
 
       def install
         bin.install "compass"
