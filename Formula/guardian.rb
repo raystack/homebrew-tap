@@ -5,21 +5,21 @@
 class Guardian < Formula
   desc "Universal data access tool."
   homepage "https://github.com/odpf/guardian"
-  version "0.2.9-alpha1"
+  version "0.2.10-alpha2"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/guardian/releases/download/v0.2.9-alpha1/guardian_0.2.9-alpha1_macos_arm64.tar.gz"
-      sha256 "8932f548571c27956306e5f100ada722dd2ce16134409177775f4401534a83e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/guardian/releases/download/v0.2.10-alpha2/guardian_0.2.10-alpha2_macos_x86_64.tar.gz"
+      sha256 "77fcfe9fedcb66f7119ecc192f7b76f09a54e2994e91e8e08cb9e64b0936edc7"
 
       def install
         bin.install "guardian"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/guardian/releases/download/v0.2.9-alpha1/guardian_0.2.9-alpha1_macos_x86_64.tar.gz"
-      sha256 "92290f4b3e4db42ebd38e5b2b4c6f1d8b723e474acb3d9d2002a04c19cdd2a1d"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/guardian/releases/download/v0.2.10-alpha2/guardian_0.2.10-alpha2_macos_arm64.tar.gz"
+      sha256 "f86c073741d9762dbf1156596d226a654f25097fccc37d0fba9a49203c374306"
 
       def install
         bin.install "guardian"
@@ -28,25 +28,25 @@ class Guardian < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/guardian/releases/download/v0.2.9-alpha1/guardian_0.2.9-alpha1_linux_arm64.tar.gz"
-      sha256 "4010e4b533fd2f41e35df5c5b5fd92e965f16c78ffd28c855709f2303821404b"
-
-      def install
-        bin.install "guardian"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/guardian/releases/download/v0.2.9-alpha1/guardian_0.2.9-alpha1_linux_armv6.tar.gz"
-      sha256 "d49b29c91f2ad24076fa6b2467a2d3defcb730b8b74bcc09f42a238770a6f42f"
+      url "https://github.com/odpf/guardian/releases/download/v0.2.10-alpha2/guardian_0.2.10-alpha2_linux_armv6.tar.gz"
+      sha256 "af00b3b28c5e15c0057a247e30751a53c41358d636062e50a6f662c90a432a6a"
 
       def install
         bin.install "guardian"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/guardian/releases/download/v0.2.9-alpha1/guardian_0.2.9-alpha1_linux_x86_64.tar.gz"
-      sha256 "03a82e149ea3123b63696cb95da8448f2a56a771f7429933728136700cfd3ac0"
+      url "https://github.com/odpf/guardian/releases/download/v0.2.10-alpha2/guardian_0.2.10-alpha2_linux_x86_64.tar.gz"
+      sha256 "d52698176e5be635e6b6fd5755a12d991102deefe87775abdeef0f31bea29873"
+
+      def install
+        bin.install "guardian"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/guardian/releases/download/v0.2.10-alpha2/guardian_0.2.10-alpha2_linux_arm64.tar.gz"
+      sha256 "318740537d7d857191404dd10df5e94ff6f4af88997e4b855787efdc86746407"
 
       def install
         bin.install "guardian"
