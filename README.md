@@ -1,6 +1,6 @@
 # ODPF Homebrew Tap
 
-This repository is home to the original homebrew taps for products throughout the Open DataOps Platform ecosystem.
+This repository is home to the original homebrew tap for products throughout the Open DataOps Platform ecosystem.
 
 ## What is Homebrew?
 
