@@ -13,7 +13,7 @@ class OptimusPluginsOdpf < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/odpf/transformers/releases/download/v0.1.6/transformers_0.1.6_macos_x86_64.tar.gz"
-      sha256 "0f6f55d6247b4ad57bb98c8727bd610b886aa2b023d199a6b6a2269905aa48f7"
+      sha256 "58ede53ed0857c9b5bad2f9578f8e502589db062595eb5e1cbd3fc6993c4fb34"
 
       def install
         bin.install Dir["optimus-*"]
@@ -21,7 +21,7 @@ class OptimusPluginsOdpf < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/odpf/transformers/releases/download/v0.1.6/transformers_0.1.6_macos_arm64.tar.gz"
-      sha256 "4be40dd23d10b6721c81aa2f71f6f2b66f2a4256776e1e1e02772110c4be9d18"
+      sha256 "26d6c6646231fd7c3961f28ac48cda9b81a597e1cb4edac2d8772e3ae7d03b2b"
 
       def install
         bin.install Dir["optimus-*"]
@@ -32,7 +32,7 @@ class OptimusPluginsOdpf < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/transformers/releases/download/v0.1.6/transformers_0.1.6_linux_arm64.tar.gz"
-      sha256 "9cf8d6b96a2903f0305a79a8c74f9f8b60c7c11db1e34d1b86a84094d12412d9"
+      sha256 "adccde26f4497c39421a2fd783709242c184b1e4dd6f7ffcce48a2b80d6afbe7"
 
       def install
         bin.install Dir["optimus-*"]
@@ -40,7 +40,7 @@ class OptimusPluginsOdpf < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/odpf/transformers/releases/download/v0.1.6/transformers_0.1.6_linux_x86_64.tar.gz"
-      sha256 "ceda92761b11fb9d95d7a520167cc1cb34848cccee3b252ca02dcf3b6b7d9d4e"
+      sha256 "109d57438d358b0762b74496446667a67270dc13977ecb92fbc7392db891d79e"
 
       def install
         bin.install Dir["optimus-*"]
