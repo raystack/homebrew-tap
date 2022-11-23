@@ -5,23 +5,23 @@
 class Dex < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/odpf/dex"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/dex/releases/download/v0.1.0/dex_0.1.0_macos_x86_64.tar.gz"
-      sha256 "aa401258bea570c8d699898ad9d81647ab27b204a80bcae1ebcfd3a059c16000"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/dex/releases/download/v0.1.1/dex_0.1.1_macos_arm64.tar.gz"
+      sha256 "d8b984f240403c56ef9564a0499451f37680d2f0b7bd744e78267c7d6f9a0fd9"
 
       def install
         bin.install "dex"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/dex/releases/download/v0.1.0/dex_0.1.0_macos_arm64.tar.gz"
-      sha256 "429384da58fd68ca322bde025339a7263bb0f5b55862637d4ffbad62437452f5"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/dex/releases/download/v0.1.1/dex_0.1.1_macos_x86_64.tar.gz"
+      sha256 "ea6f499923b327ed71a8adf2a54bba6cdd7d6b723764182fb9167bedf95880a1"
 
       def install
         bin.install "dex"
@@ -30,17 +30,17 @@ class Dex < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/dex/releases/download/v0.1.0/dex_0.1.0_linux_arm64.tar.gz"
-      sha256 "e4cd712fb717ff0f4b150f0bd237013af7bf4a69e59e3a17cbe62bddd3063131"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/dex/releases/download/v0.1.1/dex_0.1.1_linux_x86_64.tar.gz"
+      sha256 "36b3bcf7d6f91e891bd91bbcfcef53a80cc72a168a6309e20b3faa0ac022e9d2"
 
       def install
         bin.install "dex"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/dex/releases/download/v0.1.0/dex_0.1.0_linux_x86_64.tar.gz"
-      sha256 "ddd25f57abde32960ee8470ebb1699961b12d3621b0292b346994f3dc04d80a5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/dex/releases/download/v0.1.1/dex_0.1.1_linux_arm64.tar.gz"
+      sha256 "6f6a1e136078ae2eb57a90a40d893718efc834f9f6a76a3fe9d0f8d11cdb09cb"
 
       def install
         bin.install "dex"
