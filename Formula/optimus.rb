@@ -5,21 +5,21 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://odpf.github.io/optimus"
-  version "0.4.4"
+  version "0.4.5"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.4.4/optimus_0.4.4_macos_x86_64.tar.gz"
-      sha256 "4c5726cfc993cfcd4936a6e3af8abb557d087144761344cfa765b417f23661e6"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/optimus/releases/download/v0.4.5/optimus_0.4.5_macos_arm64.tar.gz"
+      sha256 "a5f099a545ab88aab831e52814898ba317b4b699c1c8ddbb3be2cdff27646f0b"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/optimus/releases/download/v0.4.4/optimus_0.4.4_macos_arm64.tar.gz"
-      sha256 "7b9aba2129ab8e7d42334e9245d85838707cda2659a2870c26082df179ce5a33"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/optimus/releases/download/v0.4.5/optimus_0.4.5_macos_x86_64.tar.gz"
+      sha256 "8687d859cc2e742477e6f0b78a75715a41393a6dbee37c0cadcd32ce3aef41c9"
 
       def install
         bin.install "optimus"
@@ -28,25 +28,25 @@ class Optimus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/optimus/releases/download/v0.4.4/optimus_0.4.4_linux_armv6.tar.gz"
-      sha256 "8e1e5fd343b372dae8c9e2abd77d99131e6a326ecdc3ddd3a7190f29034b2da5"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/optimus/releases/download/v0.4.5/optimus_0.4.5_linux_x86_64.tar.gz"
+      sha256 "661d2388df883f9ff92d77f21682f98ce55071e225895daf9c55dc503f2b558c"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/optimus/releases/download/v0.4.4/optimus_0.4.4_linux_arm64.tar.gz"
-      sha256 "8ecb6c8d465d1c70616dae43288efbcc8484ec58a9094c930d4921e2eadfb72a"
+      url "https://github.com/odpf/optimus/releases/download/v0.4.5/optimus_0.4.5_linux_arm64.tar.gz"
+      sha256 "1a4d8e319735d0ddeb87edf84642332fe2ca1ce5e995582e353dd87edcaa043c"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.4.4/optimus_0.4.4_linux_x86_64.tar.gz"
-      sha256 "57a62e3627c50c7cc3c9b2c2ea4064cdfae794030df20844394866913881bf75"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/optimus/releases/download/v0.4.5/optimus_0.4.5_linux_armv6.tar.gz"
+      sha256 "299a13dc4688db0b7bdc110f4efbe300f17e2fd874a88d10253331dfc193104a"
 
       def install
         bin.install "optimus"
