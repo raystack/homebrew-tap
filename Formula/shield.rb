@@ -11,17 +11,17 @@ class Shield < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_arm64.tar.gz"
-      sha256 "b327fe7a1620dfb4b54d0b947642249edfb53d4c52a37080c37e4f8573920327"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_x86_64.tar.gz"
+      sha256 "743b0c1c30a2c8b1e417ca1b173e702a5a8ca07e7007e4bca32b9ba643834b1f"
 
       def install
         bin.install "shield"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_x86_64.tar.gz"
-      sha256 "b673ef634d54942e236f614a24d0fb695e502cb000f3879f421ca33ba5dd1c26"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_arm64.tar.gz"
+      sha256 "1b93b3298c897c393c3562bd366688c6b4996ef09317747f030c2a26326bc3df"
 
       def install
         bin.install "shield"
@@ -32,7 +32,7 @@ class Shield < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_armv6.tar.gz"
-      sha256 "6b8d345cb816ddb51b37ba3b393f23c039a51fd5641873ff8847f7c000590eef"
+      sha256 "7358f9f9bd9f9bbd7ac0ed48465e9954b749dc19ec7ac25b251898ad05586df7"
 
       def install
         bin.install "shield"
@@ -40,7 +40,7 @@ class Shield < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_x86_64.tar.gz"
-      sha256 "2a23859ddb1f6e34c445455407e69b57f3c7606f04db7a0b1b78fa7fa14ff665"
+      sha256 "23998d532d0babe80352e1915947ee5619eec4ff2436d8cbad41f1b0e0ffd93e"
 
       def install
         bin.install "shield"
@@ -48,7 +48,7 @@ class Shield < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_arm64.tar.gz"
-      sha256 "8bc876dad306253771872c272ec714eb92c26418f11d6f4a1d8915af9e12b4c0"
+      sha256 "d916b23a70f3300d9ac9b2013ddb935c4072bbc62a0ed21f9687744a19efdaed"
 
       def install
         bin.install "shield"
