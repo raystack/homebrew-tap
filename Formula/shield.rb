@@ -13,7 +13,7 @@ class Shield < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_arm64.tar.gz"
-      sha256 "2f737107e2b76f10ac758c246be5ab671ad0ea8cef13115632c8263f87b42363"
+      sha256 "43effdcc2b6c23283b089b68f521c026a34612a26ef3b424e4b0388804e759e9"
 
       def install
         bin.install "shield"
@@ -21,7 +21,7 @@ class Shield < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_macos_x86_64.tar.gz"
-      sha256 "920aa1e7e71ed98b6f60a072d574e3d205b66c67df3c1b21d6004ad2b22de863"
+      sha256 "5fef0af01acd605af3d4eb32846b44f04e3475b0692bfc8e2cc31b3d32e9215a"
 
       def install
         bin.install "shield"
@@ -32,7 +32,7 @@ class Shield < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_armv6.tar.gz"
-      sha256 "da08978d0836327907a22e47754af2b6296a26d6fa5008d0d2612dfa0f1e36b4"
+      sha256 "2c644fa9e84684b3b99b2a5e8d69514bb29e34bb132c47075ced729ad0978136"
 
       def install
         bin.install "shield"
@@ -40,7 +40,7 @@ class Shield < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_x86_64.tar.gz"
-      sha256 "306df1bbc8146b04e0e4862e8506b68b19eb3fe3848d69bf151a074a68a0969c"
+      sha256 "b09340a6ffab3b2cdf590cd91ce6b5e065b2b4f00695e269a875da0412d2f281"
 
       def install
         bin.install "shield"
@@ -48,7 +48,7 @@ class Shield < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/odpf/shield/releases/download/v0.5.0-alpha/shield_0.5.0-alpha_linux_arm64.tar.gz"
-      sha256 "5c4b6e06469a58ddb3add38e40d3c17bfd795637e4279a7d41d987dbcf7ad8c9"
+      sha256 "badd2a76787a3974e5ed90db774709303d69ca31e5837cc2400370d69adb73af"
 
       def install
         bin.install "shield"
