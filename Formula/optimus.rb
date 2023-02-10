@@ -5,21 +5,21 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://odpf.github.io/optimus"
-  version "0.5.4"
+  version "0.5.5"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/optimus/releases/download/v0.5.4/optimus_0.5.4_macos_arm64.tar.gz"
-      sha256 "b50e89f4033dd09407b2f6740f61ed62e6d0ddcbde69181540f0ed2aeddbdefe"
+      url "https://github.com/odpf/optimus/releases/download/v0.5.5/optimus_0.5.5_macos_arm64.tar.gz"
+      sha256 "668dc2efe70cf187743f809b6f5a5e7a6f0c912922a4039a9647e81d2dc394ef"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.5.4/optimus_0.5.4_macos_x86_64.tar.gz"
-      sha256 "6806b6a330b01bf7e2d7e0046cb48a5761a63e2b244adf428939ead6301ee39b"
+      url "https://github.com/odpf/optimus/releases/download/v0.5.5/optimus_0.5.5_macos_x86_64.tar.gz"
+      sha256 "5aacdf9ab27091fb89d92ce2afa8d755add54d3b7cdee483be197cfb980bd756"
 
       def install
         bin.install "optimus"
@@ -29,16 +29,16 @@ class Optimus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/optimus/releases/download/v0.5.4/optimus_0.5.4_linux_arm64.tar.gz"
-      sha256 "46756961ddec69421e74775bcd380c25fabc11021943567c8e358a615c031b01"
+      url "https://github.com/odpf/optimus/releases/download/v0.5.5/optimus_0.5.5_linux_arm64.tar.gz"
+      sha256 "ecdedb3a8899da8f49ac7d5604e6b4b2be295aaebb98629d37b78a64322c76d3"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/optimus/releases/download/v0.5.4/optimus_0.5.4_linux_x86_64.tar.gz"
-      sha256 "3810050eb78c5c0ec20a1c551244f9be4b76c717848dc0cb7a48b12b571eba35"
+      url "https://github.com/odpf/optimus/releases/download/v0.5.5/optimus_0.5.5_linux_x86_64.tar.gz"
+      sha256 "212de5bce34fe43b88452bbb9ac0cd2a2d681e8726252c36d6bfbdb7a9423aa5"
 
       def install
         bin.install "optimus"
