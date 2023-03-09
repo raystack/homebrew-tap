@@ -5,23 +5,23 @@
 class Compass < Formula
   desc "Metadata Discovery and Lineage Service"
   homepage "https://github.com/odpf/compass"
-  version "0.3.1"
+  version "0.4.0"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/compass/releases/download/v0.3.1/compass_0.3.1_macos_arm64.tar.gz"
-      sha256 "862e50575e40a72868a44347ce564cf175cb225606b7a45dc7dc5bee3c282cb9"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/compass/releases/download/v0.4.0/compass_0.4.0_macos_x86_64.tar.gz"
+      sha256 "e563011721322a8e8992e51cc18a0f7c4c8b568130d913dd1e08cc29477957b7"
 
       def install
         bin.install "compass"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/compass/releases/download/v0.3.1/compass_0.3.1_macos_x86_64.tar.gz"
-      sha256 "61d70aa777b97c5b9e2c4ef55abf4ddcaf88de28b6754b2a8b25c9835b9f7458"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/compass/releases/download/v0.4.0/compass_0.4.0_macos_arm64.tar.gz"
+      sha256 "1beb9db7edfe97daaf8c7171c99f51d6fa188fc8c9f0afa6bf3269ee05b361d8"
 
       def install
         bin.install "compass"
@@ -30,25 +30,25 @@ class Compass < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/compass/releases/download/v0.3.1/compass_0.3.1_linux_armv6.tar.gz"
-      sha256 "67d482a8b0b480acac22a47de08b24b7ef554a824d745c3b1371cc708e3f0f66"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/compass/releases/download/v0.4.0/compass_0.4.0_linux_x86_64.tar.gz"
+      sha256 "df02c3e08e4c696e4de97ae3bb2c4bc9be8115b321db3337f7c251e2cf176c09"
 
       def install
         bin.install "compass"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/compass/releases/download/v0.3.1/compass_0.3.1_linux_x86_64.tar.gz"
-      sha256 "f81945d90550f0e1168aea73597c3b1a241f4dc3ea58184dfb0477bff2526609"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/compass/releases/download/v0.4.0/compass_0.4.0_linux_armv6.tar.gz"
+      sha256 "febd978fefb450b5b43f521f45cd4046429ac45d75c6a8de7db6f341a3b5d4ea"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/compass/releases/download/v0.3.1/compass_0.3.1_linux_arm64.tar.gz"
-      sha256 "9a0469b4dbba16b2cb602b6d862c009f44858cd4bc88cef69f5f1ab165a741b8"
+      url "https://github.com/odpf/compass/releases/download/v0.4.0/compass_0.4.0_linux_arm64.tar.gz"
+      sha256 "8465e9f5a6b7a32b6c34d66ca3b8962c62dffc741155ea0fc0f245ee36e4318f"
 
       def install
         bin.install "compass"
