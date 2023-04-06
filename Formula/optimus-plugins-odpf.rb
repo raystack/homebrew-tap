@@ -5,23 +5,23 @@
 class OptimusPluginsOdpf < Formula
   desc "Optimus Plugins for warehouse"
   homepage ""
-  version "0.3.2"
+  version "0.2.1"
   license "Apache 2.0"
 
   depends_on "odpf/taps/optimus"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/odpf/transformers/releases/download/v0.3.2/transformers_0.3.2_macos_arm64.tar.gz"
-      sha256 "76c4fdd79eb373fff602ea7dc0762c6e0b29746b85121a61fc01f56c5bc7c829"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_x86_64.tar.gz"
+      sha256 "72916e2a16a2abae4f4d8a5be4f2480d00b18c49145b01ca82230d9289eee9be"
 
       def install
         bin.install Dir["optimus-*"]
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.3.2/transformers_0.3.2_macos_x86_64.tar.gz"
-      sha256 "9b743549d22c42fd21ec4f31781189d6bc5347a8468737e188d95ae388ef8943"
+    if Hardware::CPU.arm?
+      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_arm64.tar.gz"
+      sha256 "738e10479c9cb73aa7be4098ccf7df19934b517b967e686bbb121a5e60e7f7d8"
 
       def install
         bin.install Dir["optimus-*"]
@@ -30,17 +30,17 @@ class OptimusPluginsOdpf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.3.2/transformers_0.3.2_linux_x86_64.tar.gz"
-      sha256 "8de0fa97a6cae59c164f1a6ee2d6cc84e9e6bba79c6a7faef1ab7117b1c6414a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_arm64.tar.gz"
+      sha256 "84b4b5376a2c8baf33049a4b408ce9888369179d88593d9cb66db798a598c11b"
 
       def install
         bin.install Dir["optimus-*"]
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/transformers/releases/download/v0.3.2/transformers_0.3.2_linux_arm64.tar.gz"
-      sha256 "18ff7bf93a0c7178e49d7b881581750a904cf590057833299cbd9d4ef9b5e2be"
+    if Hardware::CPU.intel?
+      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_x86_64.tar.gz"
+      sha256 "99c38ae44bcf48d3a4cce26689391773c389a67bfd34b05f0ae0aeab766852a0"
 
       def install
         bin.install Dir["optimus-*"]
