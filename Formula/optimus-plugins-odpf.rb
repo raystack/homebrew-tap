@@ -8,11 +8,11 @@ class OptimusPluginsOdpf < Formula
   version "0.2.1"
   license "Apache 2.0"
 
-  depends_on "odpf/taps/optimus"
+  depends_on "raystack/taps/optimus"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_x86_64.tar.gz"
+      url "https://github.com/raystack/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_x86_64.tar.gz"
       sha256 "72916e2a16a2abae4f4d8a5be4f2480d00b18c49145b01ca82230d9289eee9be"
 
       def install
@@ -20,7 +20,7 @@ class OptimusPluginsOdpf < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_arm64.tar.gz"
+      url "https://github.com/raystack/transformers/releases/download/v0.2.1/transformers_0.2.1_macos_arm64.tar.gz"
       sha256 "738e10479c9cb73aa7be4098ccf7df19934b517b967e686bbb121a5e60e7f7d8"
 
       def install
@@ -31,7 +31,7 @@ class OptimusPluginsOdpf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_arm64.tar.gz"
+      url "https://github.com/raystack/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_arm64.tar.gz"
       sha256 "84b4b5376a2c8baf33049a4b408ce9888369179d88593d9cb66db798a598c11b"
 
       def install
@@ -39,7 +39,7 @@ class OptimusPluginsOdpf < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odpf/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_x86_64.tar.gz"
+      url "https://github.com/raystack/transformers/releases/download/v0.2.1/transformers_0.2.1_linux_x86_64.tar.gz"
       sha256 "99c38ae44bcf48d3a4cce26689391773c389a67bfd34b05f0ae0aeab766852a0"
 
       def install
