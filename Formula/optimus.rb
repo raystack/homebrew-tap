@@ -5,21 +5,21 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://raystack.github.io/optimus"
-  version "0.5.9"
+  version "0.7.0"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/optimus/releases/download/v0.5.9/optimus_0.5.9_macos_x86_64.tar.gz"
-      sha256 "aa9533ecbbba0823aeb59de12cb45ece834d741e6dcd8a05f26bf7c8d538864f"
+    if Hardware::CPU.arm?
+      url "https://github.com/raystack/optimus/releases/download/v0.7.0/optimus_0.7.0_macos_arm64.tar.gz"
+      sha256 "df3accba0714bc611aa262baf461ace831297e391eaacba31d891999e1081944"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/raystack/optimus/releases/download/v0.5.9/optimus_0.5.9_macos_arm64.tar.gz"
-      sha256 "13fe9c81f9198ff31d2cd95ea5ebb4f7a8978fa386424b10dc511c66a8f959e5"
+    if Hardware::CPU.intel?
+      url "https://github.com/raystack/optimus/releases/download/v0.7.0/optimus_0.7.0_macos_x86_64.tar.gz"
+      sha256 "72e242d51b312fa5b991badb1661dc8e7f68047cd1dcb366f10ae012958d4db5"
 
       def install
         bin.install "optimus"
@@ -28,17 +28,17 @@ class Optimus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/optimus/releases/download/v0.5.9/optimus_0.5.9_linux_arm64.tar.gz"
-      sha256 "7ad97f1e32a40b0bf6f30365c6aa0896bc30d7d4c4de5c2ca3387560e45fd361"
+    if Hardware::CPU.intel?
+      url "https://github.com/raystack/optimus/releases/download/v0.7.0/optimus_0.7.0_linux_x86_64.tar.gz"
+      sha256 "7ad473a473fb25fba27c9fda1e7fbe1cf0a2e8481c79cabe66dd9d44367231cf"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/optimus/releases/download/v0.5.9/optimus_0.5.9_linux_x86_64.tar.gz"
-      sha256 "2c428610d400e76826ed5132cd3e459b6049d1d9533949f485c478b1f92815d2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/raystack/optimus/releases/download/v0.7.0/optimus_0.7.0_linux_arm64.tar.gz"
+      sha256 "bdfc124d07c6e0f67f3944707e0f317b7880370c46a9c4aa31056588cfd95c33"
 
       def install
         bin.install "optimus"
