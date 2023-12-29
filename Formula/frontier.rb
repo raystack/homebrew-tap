@@ -5,23 +5,23 @@
 class Frontier < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/raystack/frontier"
-  version "0.8.11"
+  version "0.8.12"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.11/frontier_Darwin_arm64.tar.gz"
-      sha256 "69b57040b0780ddfcb4778a7ca6a3c05ed2077a34cba50823c3aa785fb32854a"
+      url "https://github.com/raystack/frontier/releases/download/v0.8.12/frontier_Darwin_arm64.tar.gz"
+      sha256 "9c860ecf283ff0453e0abb5ba17bfd622641013d706a575216d033d3a3a51484"
 
       def install
         bin.install "frontier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.11/frontier_Darwin_x86_64.tar.gz"
-      sha256 "7ad4e26416ae00c97483c76de7f3a5beac349dd558b624faac4230c68a52935a"
+      url "https://github.com/raystack/frontier/releases/download/v0.8.12/frontier_Darwin_x86_64.tar.gz"
+      sha256 "870d6b66489b557c4bb8aa9c51a2ce572919fb8f754814cee9fc945f68c9c530"
 
       def install
         bin.install "frontier"
@@ -31,16 +31,16 @@ class Frontier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.11/frontier_Linux_arm64.tar.gz"
-      sha256 "080774127218b71e3e64cef8194715c1b3bc8653b55f7d82d2a4dac7274a3191"
+      url "https://github.com/raystack/frontier/releases/download/v0.8.12/frontier_Linux_arm64.tar.gz"
+      sha256 "d0b0db8e679b03cb7a92652380f0573d9ebcb150ca6f4e530bf1ced296448596"
 
       def install
         bin.install "frontier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.11/frontier_Linux_x86_64.tar.gz"
-      sha256 "c47fddbdcac3dec5da448617f9eae238be263fad9d03a533e95814647dadbff0"
+      url "https://github.com/raystack/frontier/releases/download/v0.8.12/frontier_Linux_x86_64.tar.gz"
+      sha256 "b4c388e86fd626e92397a7a9b29f8793c1bae8d0a21f34d592726f6fa5b8590e"
 
       def install
         bin.install "frontier"
