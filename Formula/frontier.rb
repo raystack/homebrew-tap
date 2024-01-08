@@ -5,23 +5,23 @@
 class Frontier < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/raystack/frontier"
-  version "0.8.13"
+  version "0.8.14"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.13/frontier_Darwin_arm64.tar.gz"
-      sha256 "14ca67bcf82bb4c64330a4af975df0c757abc4e3ad03fad065b62fce41667869"
+    if Hardware::CPU.intel?
+      url "https://github.com/raystack/frontier/releases/download/v0.8.14/frontier_Darwin_x86_64.tar.gz"
+      sha256 "0c1dfb6b221dc5322567c32d720caaefd046c5bc218b8e49527a4e57aa734a17"
 
       def install
         bin.install "frontier"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.13/frontier_Darwin_x86_64.tar.gz"
-      sha256 "e0f5c2b3cefa07e2dd65c04ba380f8d8e79259ff10bc208b2a8e5105623dec08"
+    if Hardware::CPU.arm?
+      url "https://github.com/raystack/frontier/releases/download/v0.8.14/frontier_Darwin_arm64.tar.gz"
+      sha256 "2ac72096ef66104070ec64f811e3d88c344acd91080d0c96ad65b7c22a4960e5"
 
       def install
         bin.install "frontier"
@@ -30,17 +30,17 @@ class Frontier < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.13/frontier_Linux_arm64.tar.gz"
-      sha256 "e3c1fa912c6a5e1bd59e2237d285f7d56e639cae938a5a296b78e9ad3a000ca0"
+    if Hardware::CPU.intel?
+      url "https://github.com/raystack/frontier/releases/download/v0.8.14/frontier_Linux_x86_64.tar.gz"
+      sha256 "993fa2346a43da93feccc7f673827a6db6090a2782bca58fbc01f0a6252ee033"
 
       def install
         bin.install "frontier"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/frontier/releases/download/v0.8.13/frontier_Linux_x86_64.tar.gz"
-      sha256 "98217f2a04900de7c0810ad9a0f814664bb49453bbda71bd06088fdf0eda1e8b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/raystack/frontier/releases/download/v0.8.14/frontier_Linux_arm64.tar.gz"
+      sha256 "bd9366e4627306d426b486af4e314b8a2feac68c17d5ada79ba861247e7ce45f"
 
       def install
         bin.install "frontier"
