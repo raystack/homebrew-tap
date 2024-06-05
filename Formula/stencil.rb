@@ -5,23 +5,23 @@
 class Stencil < Formula
   desc "Schema registry"
   homepage "https://github.com/raystack/stencil"
-  version "0.5.0"
+  version "0.5.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/raystack/stencil/releases/download/v0.5.0/stencil_Darwin_x86_64'.tar.gz"
-      sha256 "6f6f2b83abd52bd93cc837ab71fcfb44af98aa64ce90722c68afb79e27969eb7"
+      url "https://github.com/raystack/stencil/releases/download/v0.5.1/stencil_Darwin_x86_64.tar.gz"
+      sha256 "80aa8ff0ff5c4e3856b3f0578e4b88d6d07aa83a28f0fbba82997b257230af5a"
 
       def install
         bin.install "stencil"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/raystack/stencil/releases/download/v0.5.0/stencil_Darwin_arm64'.tar.gz"
-      sha256 "2e975dd1b9b5e483e07a5743f3e4c914d3694c69732da26b54f339414e6764cc"
+      url "https://github.com/raystack/stencil/releases/download/v0.5.1/stencil_Darwin_arm64.tar.gz"
+      sha256 "e9fce1572f3be5f34adcbc824181ed9963961b398f9467bcd5876ed75d67527f"
 
       def install
         bin.install "stencil"
@@ -30,25 +30,25 @@ class Stencil < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/stencil/releases/download/v0.5.0/stencil_Linux_x86_64'.tar.gz"
-      sha256 "3cc89993835ea4d172811e06f4a46a847d3e445617e0f0fc44d33cf76cff6d30"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/raystack/stencil/releases/download/v0.5.1/stencil_Linux_arm64.tar.gz"
+      sha256 "04926367822637d5a3d1939cbe0e737906d8d30637e8508252c09baa63bfea91"
 
       def install
         bin.install "stencil"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/stencil/releases/download/v0.5.0/stencil_Linux_arm64'.tar.gz"
-      sha256 "fff0b477e04550cb14838c7ece7790b5bb7cef3f2b73aa279c10cf6fabd0ed84"
+    if Hardware::CPU.intel?
+      url "https://github.com/raystack/stencil/releases/download/v0.5.1/stencil_Linux_x86_64.tar.gz"
+      sha256 "2f1e0c2a36abbce68012e0c0a88674ff7c99f6aaed1b2b8175046a7270611f8b"
 
       def install
         bin.install "stencil"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/stencil/releases/download/v0.5.0/stencil_Linux_armv6'.tar.gz"
-      sha256 "82489aaf9886c9facf9b42cefb51c0dc97f2c25663de36e3f460fccd2b20a715"
+      url "https://github.com/raystack/stencil/releases/download/v0.5.1/stencil_Linux_armv6.tar.gz"
+      sha256 "a291498803ae15ef7e18595805549120dc9a5ee46b736872090f24455041b8cf"
 
       def install
         bin.install "stencil"
