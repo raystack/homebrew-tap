@@ -5,29 +5,49 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/raystack/meteor"
-  version "0.10.0"
+  version "0.10.1"
   license "Apache 2.0"
 
   depends_on "git"
-  depends_on :linux
 
-  on_intel do
-    if Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/meteor/releases/download/v0.10.0/meteor_0.10.0_linux_amd64.tar.gz"
-      sha256 "eb68d78614ca5efd2254342e02d88786220543c3ae040ffc6f7de1b75e7ebaff"
+  on_macos do
+    on_intel do
+      url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_darwin_amd64.tar.gz"
+      sha256 "ed8a0a7a1e8793ec7a3bc1686c45fb282d359dfb54fa3116fe1f7c4b082f6b48"
+
+      def install
+        bin.install "meteor"
+      end
+    end
+    on_arm do
+      url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_darwin_arm64.tar.gz"
+      sha256 "611b3d8c28e11118d8a3936564fabf547c077f7407fba7282fe29aa0ab2f7653"
 
       def install
         bin.install "meteor"
       end
     end
   end
-  on_arm do
-    if Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/meteor/releases/download/v0.10.0/meteor_0.10.0_linux_arm64.tar.gz"
-      sha256 "4974ce2cf4239e382e0c796a613955951b6b3b8d5e850dc473da7d01c4ea20f3"
 
-      def install
-        bin.install "meteor"
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_linux_amd64.tar.gz"
+        sha256 "19d0d579e83db2c60e7328682e7e435c568a8fa07876ce50f6d5818098c5a983"
+
+        def install
+          bin.install "meteor"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_linux_arm64.tar.gz"
+        sha256 "885a946032091a00e0e3219dea3272ac3ccae15bc7e727e120ccc8838caf5b18"
+
+        def install
+          bin.install "meteor"
+        end
       end
     end
   end
