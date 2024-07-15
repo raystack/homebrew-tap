@@ -5,23 +5,23 @@
 class Raccoon < Formula
   desc "Scalable event ingestion tool"
   homepage "https://github.com/raystack/raccoon"
-  version "0.2.5"
+  version "0.2.6"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/raystack/raccoon/releases/download/v0.2.5/raccoon_0.2.5_darwin_amd64.tar.gz"
-      sha256 "f51ad94aea62108148924eb6d2f6a0e354307ede8ae12d156dde8393dc028eaa"
+      url "https://github.com/raystack/raccoon/releases/download/v0.2.6/raccoon_0.2.6_darwin_amd64.tar.gz"
+      sha256 "61d4b259e9c89597c6fa2b386b9541d81b0411bae6aa2bb5e4efa44c4065f059"
 
       def install
         bin.install "raccoon"
       end
     end
     on_arm do
-      url "https://github.com/raystack/raccoon/releases/download/v0.2.5/raccoon_0.2.5_darwin_arm64.tar.gz"
-      sha256 "d8c7c7a834b9df56ca2114edea6d6be0c7a60d4f876eb5ac99601006ee0677b4"
+      url "https://github.com/raystack/raccoon/releases/download/v0.2.6/raccoon_0.2.6_darwin_arm64.tar.gz"
+      sha256 "54ec01e26bde009a3b5b3e4144e9105908fd227058c75aa59f7ef47a65b51f33"
 
       def install
         bin.install "raccoon"
@@ -32,8 +32,8 @@ class Raccoon < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/raccoon/releases/download/v0.2.5/raccoon_0.2.5_linux_amd64.tar.gz"
-        sha256 "e35cbbaa95d87a97e6c20a6fa088cb0423efc1f4bc306c4e24ba9c83c32b3c79"
+        url "https://github.com/raystack/raccoon/releases/download/v0.2.6/raccoon_0.2.6_linux_amd64.tar.gz"
+        sha256 "eab4232d6ea4831a0ff62dc553f85b84468438e2051ba3a5694622ee505c7f86"
 
         def install
           bin.install "raccoon"
@@ -42,8 +42,8 @@ class Raccoon < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/raccoon/releases/download/v0.2.5/raccoon_0.2.5_linux_arm64.tar.gz"
-        sha256 "1e056631289b07aac92bc8b4d5bce804e3587f0392a40311db281f19c904622c"
+        url "https://github.com/raystack/raccoon/releases/download/v0.2.6/raccoon_0.2.6_linux_arm64.tar.gz"
+        sha256 "269ed3d519a2e8a0fafa900acdcbaf1f475666461379741613698588c98eeece"
 
         def install
           bin.install "raccoon"
