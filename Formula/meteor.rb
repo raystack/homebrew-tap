@@ -5,23 +5,23 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/raystack/meteor"
-  version "0.10.1"
+  version "0.11.0"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_darwin_amd64.tar.gz"
-      sha256 "ed8a0a7a1e8793ec7a3bc1686c45fb282d359dfb54fa3116fe1f7c4b082f6b48"
+      url "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_darwin_amd64.tar.gz"
+      sha256 "5fbc9f77101bab8f15685a658f5739c0b50212561adec75c6858432767cb3c63"
 
       def install
         bin.install "meteor"
       end
     end
     on_arm do
-      url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_darwin_arm64.tar.gz"
-      sha256 "611b3d8c28e11118d8a3936564fabf547c077f7407fba7282fe29aa0ab2f7653"
+      url "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_darwin_arm64.tar.gz"
+      sha256 "6f7ff6d8781886617826c44e376c34841dbf008535916d3f32daf15ae436def7"
 
       def install
         bin.install "meteor"
@@ -32,8 +32,8 @@ class Meteor < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_linux_amd64.tar.gz"
-        sha256 "19d0d579e83db2c60e7328682e7e435c568a8fa07876ce50f6d5818098c5a983"
+        url "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_linux_amd64.tar.gz"
+        sha256 "7c05fd74c2bae23701977041253df4c1fe70b88756761a96aef20f97fc8cb001"
 
         def install
           bin.install "meteor"
@@ -42,8 +42,8 @@ class Meteor < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_linux_arm64.tar.gz"
-        sha256 "885a946032091a00e0e3219dea3272ac3ccae15bc7e727e120ccc8838caf5b18"
+        url "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_linux_arm64.tar.gz"
+        sha256 "6597f5493f7336f8df409483da9af6e8212203820c285a7cda0d978de45abc1d"
 
         def install
           bin.install "meteor"
