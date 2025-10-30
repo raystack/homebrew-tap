@@ -5,23 +5,23 @@
 class Frontier < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/raystack/frontier"
-  version "0.78.0"
+  version "0.78.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/raystack/frontier/releases/download/v0.78.0/frontier_Darwin_x86_64.tar.gz"
-      sha256 "713fe64fe49414f4d8de39b73f40382822305f5295693df1541d8fff6343608a"
+      url "https://github.com/raystack/frontier/releases/download/v0.78.1/frontier_Darwin_x86_64.tar.gz"
+      sha256 "6b1ef8defb836297d71df347297706c16fa42f8eb773e5b04ecdf9498d170478"
 
       def install
         bin.install "frontier"
       end
     end
     on_arm do
-      url "https://github.com/raystack/frontier/releases/download/v0.78.0/frontier_Darwin_arm64.tar.gz"
-      sha256 "1bd98c4cc4922bd8b1e03bb38e4e892afee6bacc96888769ee88088ae8e28925"
+      url "https://github.com/raystack/frontier/releases/download/v0.78.1/frontier_Darwin_arm64.tar.gz"
+      sha256 "84fac4c9a1952ab241567e9cb29e131825828c4cd7ba9899c0b5d1ddad1cca23"
 
       def install
         bin.install "frontier"
@@ -32,8 +32,8 @@ class Frontier < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/frontier/releases/download/v0.78.0/frontier_Linux_x86_64.tar.gz"
-        sha256 "82d8a175c6040dcb2ea07eafccc407625fccb0554d86b359cd752738dff1fec5"
+        url "https://github.com/raystack/frontier/releases/download/v0.78.1/frontier_Linux_x86_64.tar.gz"
+        sha256 "7535e33641dffc63d01e69765ba13b7ce8b07ef435805052171b877b3a7fa52b"
 
         def install
           bin.install "frontier"
@@ -42,8 +42,8 @@ class Frontier < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/frontier/releases/download/v0.78.0/frontier_Linux_arm64.tar.gz"
-        sha256 "1a0f55a4cc118d7f1839e3880d2f30d7c8a584604f407f7119eaf2f60e14691e"
+        url "https://github.com/raystack/frontier/releases/download/v0.78.1/frontier_Linux_arm64.tar.gz"
+        sha256 "f622869b8e6dd9641b70a6efc31383464a3255263b93228aeeed5c3836555433"
 
         def install
           bin.install "frontier"
