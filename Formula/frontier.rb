@@ -5,23 +5,23 @@
 class Frontier < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/raystack/frontier"
-  version "0.86.0"
+  version "0.0.0-test.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/raystack/frontier/releases/download/v0.86.0/frontier_Darwin_x86_64.tar.gz"
-      sha256 "ca571739bc627d3d277d649e7de1c0287776152a53b35730f5489691a9f9ee44"
+      url "https://github.com/raystack/frontier/releases/download/v0.0.0-test.1/frontier_Darwin_x86_64.tar.gz"
+      sha256 "acd8dcbabb7411ef91c69da0ec94ce0d5a1007d59af1498a89bd091dfb9c82b5"
 
       def install
         bin.install "frontier"
       end
     end
     on_arm do
-      url "https://github.com/raystack/frontier/releases/download/v0.86.0/frontier_Darwin_arm64.tar.gz"
-      sha256 "20d2330fa72c4ac536ed00e46035dc9fb38c2d733e9f160de4ef3938a9b0c01b"
+      url "https://github.com/raystack/frontier/releases/download/v0.0.0-test.1/frontier_Darwin_arm64.tar.gz"
+      sha256 "d9820fb434db791b8c21f51341c35ab501f8984c5cb91425b2b6e12d17cbecaf"
 
       def install
         bin.install "frontier"
@@ -30,20 +30,10 @@ class Frontier < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/frontier/releases/download/v0.86.0/frontier_Linux_x86_64.tar.gz"
-        sha256 "8b98becb4268ac6928b1f69251b1a3ce9537b03a4fd8ca8a1abbb0fb9bcdd8e7"
-
-        def install
-          bin.install "frontier"
-        end
-      end
-    end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/frontier/releases/download/v0.86.0/frontier_Linux_arm64.tar.gz"
-        sha256 "7ab5ac44e2ed9a6f1b0f02aa39da974dbf15a071acc2b6b01a060cf653fc9c2d"
+        url "https://github.com/raystack/frontier/releases/download/v0.0.0-test.1/frontier_Linux_arm64.tar.gz"
+        sha256 "ba210744a38e91417643cdb7d030af0ca930fa8c77cb0a751fe8e8c875fa5bf9"
 
         def install
           bin.install "frontier"
