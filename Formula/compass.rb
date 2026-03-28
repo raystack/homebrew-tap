@@ -5,52 +5,40 @@
 class Compass < Formula
   desc "Data catalog service"
   homepage "https://github.com/raystack/compass"
-  version "0.6.0"
+  version "0.7.1"
   license "Apache 2.0"
-
-  depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/raystack/compass/releases/download/v0.6.0/compass_0.6.0_darwin_amd64.tar.gz"
-      sha256 "fb00814cf27cde9516acd4075ea92214cf4ad863431d63eb0c8ba7a51ff24a24"
+      url "https://github.com/raystack/compass/releases/download/v0.7.1/compass_0.7.1_darwin_amd64.tar.gz"
+      sha256 "05434df3ac97344e9150e409ae1c1767f461f6f024c26a3b283529ad8bb73d0c"
 
-      def install
+      define_method(:install) do
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/raystack/compass/releases/download/v0.6.0/compass_0.6.0_darwin_arm64.tar.gz"
-      sha256 "31cec2735bf115b47bffacb7910623de4d6a0ef8355886f21c6f925cfec84209"
+      url "https://github.com/raystack/compass/releases/download/v0.7.1/compass_0.7.1_darwin_arm64.tar.gz"
+      sha256 "14599bb2a79c3ed5cce1ac1a842449b22933ab4e93efbbb7be354262326c89b3"
 
-      def install
+      define_method(:install) do
         bin.install "compass"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/compass/releases/download/v0.6.0/compass_0.6.0_linux_armv6.tar.gz"
-      sha256 "2e84004fa972688382fa78b953f185b1d3d988404b2488a7ad574b6aeace73d4"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/raystack/compass/releases/download/v0.7.1/compass_0.7.1_linux_amd64.tar.gz"
+      sha256 "f5c50e2c3761b791e55dcba85c8919cbd478d0362b50dce687605965f31e42c9"
+      define_method(:install) do
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/raystack/compass/releases/download/v0.6.0/compass_0.6.0_linux_arm64.tar.gz"
-      sha256 "968111bbe6507be75d2cd3aca18950dd3ec0348be5cf13eb7e9cf1cd4c042f77"
-
-      def install
-        bin.install "compass"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/raystack/compass/releases/download/v0.6.0/compass_0.6.0_linux_amd64.tar.gz"
-      sha256 "4676ba5bd69ded027482798da590cc80fb92b482fbd417ba8698444b512b54b4"
-
-      def install
+      url "https://github.com/raystack/compass/releases/download/v0.7.1/compass_0.7.1_linux_arm64.tar.gz"
+      sha256 "1be17790ab08ac01683ab92d9c42948f166c4ac7877d925af50328457ece9af5"
+      define_method(:install) do
         bin.install "compass"
       end
     end
