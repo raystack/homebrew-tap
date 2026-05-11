@@ -5,23 +5,23 @@
 class Frontier < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/raystack/frontier"
-  version "0.100.0"
+  version "0.101.0"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/raystack/frontier/releases/download/v0.100.0/frontier_Darwin_x86_64.tar.gz"
-      sha256 "ed6c08547e9815b8b6cb5ed3985bda58b8766642d3a0630499b2beb96bfcf4c3"
+      url "https://github.com/raystack/frontier/releases/download/v0.101.0/frontier_Darwin_x86_64.tar.gz"
+      sha256 "21ac3271439d611950352f2f3e669e5c59a96f4f10198c37cae4e8e24e21f09a"
 
       def install
         bin.install "frontier"
       end
     end
     on_arm do
-      url "https://github.com/raystack/frontier/releases/download/v0.100.0/frontier_Darwin_arm64.tar.gz"
-      sha256 "706fbab1b7c633dc8a71463576278f147d7e15600a94e76287150f5ec5a39a06"
+      url "https://github.com/raystack/frontier/releases/download/v0.101.0/frontier_Darwin_arm64.tar.gz"
+      sha256 "547f17f54978166fd30e65e6e41cf220fd4f90178ac87c5361adda12e2bb8d2a"
 
       def install
         bin.install "frontier"
@@ -32,8 +32,8 @@ class Frontier < Formula
   on_linux do
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/raystack/frontier/releases/download/v0.100.0/frontier_Linux_arm64.tar.gz"
-        sha256 "ff0d495a181e0048861e45e9ac7b854229f2c93d5081aeb8efe6efeeb511dd84"
+        url "https://github.com/raystack/frontier/releases/download/v0.101.0/frontier_Linux_arm64.tar.gz"
+        sha256 "e974a6ff5f87b683785298a3f644fbd527da3bee128ae6f62d2055870e194a29"
 
         def install
           bin.install "frontier"
